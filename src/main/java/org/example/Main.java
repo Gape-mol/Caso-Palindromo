@@ -1,8 +1,12 @@
 package org.example;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        if (esPalindromo("")){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese una cadena: ");
+        String cadena = scanner.nextLine();
+        if (esPalindromo(cadena)){
             System.out.println("Es palindromo");
         }
         else{
