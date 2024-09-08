@@ -3,17 +3,23 @@ package org.example;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrese una palabra: ");
-        String palabra = scanner.nextLine();
-        if (esPalindromo(palabra)) {
-            System.out.println("La palabra "+palabra+" es palindromo");
+        System.out.print("Ingrese una palabra o frase: ");
+        String entrada = scanner.nextLine();
+
+        if (esPalindromo(entrada)) {
+            System.out.println("'" +entrada + "' es un palíndromo.");
         } else {
-            System.out.println("La palabra "+palabra+" no es palindromo");
+            System.out.println("'" +entrada + "' no es un palíndromo.");
         }
     }
-    public static boolean esPalindromo(String palabra) {
-        return palabra.equals(new StringBuilder(palabra).reverse().toString());
+
+    public static boolean esPalindromo(String cadena) {
+        String cadenaNueva = cadena.replaceAll("[^a-z]", "");
+        String resultado = new StringBuilder(cadenaNueva).reverse().toString();
+        return cadenaNueva.equals(resultado);
     }
 }
+
