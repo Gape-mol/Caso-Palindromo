@@ -15,4 +15,24 @@ class CasoPalindromosTest {
     void esPalindromoTest3(){
         assert CasoPalindromos.esPalindromo("h") == true;
     }
+
+//    @Test
+//    void esPalindromoTest4(){
+//        assert CasoPalindromos.esPalindromo(200) == false;
+//    }
+
+    @Test
+    void esPalindromoTest5(){
+        assert CasoPalindromos.esPalindromo("") == true;
+    }
+
+    @Test
+    void esPalindromoTest6(){
+        assert CasoPalindromos.esPalindromo("aaabccbaaa") == true;
+    }
+
+    @Test
+    void esPalindromoTest7(){
+        assert CasoPalindromos.esPalindromo("La tele letal") == true;
+    }
 }

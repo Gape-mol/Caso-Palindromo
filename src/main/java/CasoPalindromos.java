@@ -1,12 +1,12 @@
-import java.util.Scanner;
-
-
 public class CasoPalindromos {
     public static boolean esPalindromo(String cadena){
         String resultado = "";
-        for (int letra = cadena.length()-1; letra >=0 ; letra--) {
-            resultado += cadena.charAt(letra);
+        String cadenaMinusculasSinEspacios = cadena.toLowerCase().replaceAll(" ", "");
+        System.out.println(cadenaMinusculasSinEspacios);
+        for (int letra = cadenaMinusculasSinEspacios.length()-1; letra >=0 ; letra--) {
+            resultado += cadenaMinusculasSinEspacios.charAt(letra);
         }
-        return resultado.equals(cadena);
+        System.out.println(resultado);
+        return resultado.equals(cadenaMinusculasSinEspacios);
     }
 }
