@@ -18,6 +18,12 @@ a) es palindromo (true)
 b) no es palindromo (false)
 c) es palindromo (true)
 
+Se considera hacer 5 pruebas. La primera para asegurarse que el programa funciona correctamente, se usará el comando "assertTrue(Main.esPalindromo("anita lava la tina"))" y debería pasar la prueba.
+Para la segunda se usará "assertFalse(Main.esPalindromo("hola"))" para asegurar el caso en que la cadena entregada no sea un palindromo.
+En la tercera se usará "assertFalse(Main.esPalindromo("Anita lava la tina"))" para confirmar que el codigo dirá que no es palindromo si la cadena empieza con una mayuscula.
+Para la cuarta prueba se usará "assertTrue(Main.esPalindromo(""))" para ver que entrega el codigo al recibir una cadena vacía.
+Y por ultimo, "assertTrue(Main.esPalindromo("a"))" para el caso en que se entregue un solo caracter.
+
 - Caso de prueba 1:
 
 Input: 200 (número entero)
