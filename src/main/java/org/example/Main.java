@@ -6,20 +6,22 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese una cadena: ");
         String cadena = scanner.nextLine();
-        if (esPalindromo(cadena)){
-            System.out.println("Es palindromo");
-        }
-        else{
-            System.out.println("No es palindromo");
-        }
     }
     public static boolean esPalindromo(String cadena){
         String resultado = "";
         for (int i = cadena.length() - 1; i >= 0; i--) {
             resultado += cadena.charAt(i);
         }
-        System.out.println(resultado);
-        System.out.println(cadena);
+        imprimirPalindromo(cadena, resultado.equals(cadena));
         return resultado.equals(cadena);
     }
+    public static void imprimirPalindromo(String cadena, boolean palindromo){
+        if (palindromo){
+            System.out.println(cadena + "Es palindromo");
+        }
+        else{
+            System.out.println(cadena + "No es palindromo");
+        }
+    }
+
 }
