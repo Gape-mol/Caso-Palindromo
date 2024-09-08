@@ -17,9 +17,8 @@ public class Main {
     }
 
     public static boolean esPalindromo(String cadena) {
-        String cadenaNueva = cadena.replaceAll("[^a-z]", "");
+        String cadenaNueva = cadena.toLowerCase().replaceAll("[^a-z]", "");
         String resultado = new StringBuilder(cadenaNueva).reverse().toString();
         return cadenaNueva.equals(resultado);
     }
 }
-
